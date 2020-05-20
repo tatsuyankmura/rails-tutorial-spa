@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --config webpack/webpack.dev.config.js",
+    "start": "NODE_ENV=development webpack-dev-server --config webpack/webpack.dev.config.js --history-api-fallback",
     "build": "run-s build:*",
     "build:clean": "rimraf ./public",
     "build:webpack": "NODE_ENV=production webpack --config webpack/webpack.prod.config.js",
