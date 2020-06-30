@@ -7,6 +7,6 @@ export type LoginProps = {
 
 export const login = (session: LoginProps) => request.post('/api/login', { session });
 
-export const rememberLogin = () => request.get('/api/remember', { withCredentials: true });
+export const rememberLogin = () => request.get('/api/remember');
 
 export const logout = () => request.delete('/api/logout');

@@ -8,6 +8,7 @@ import { Root } from './pages/Root';
 import { User as UserContainer } from '../containers/UserContainer';
 import { SignUp as SignUpContainer } from '../containers/SignUpContainer';
 import { Login as LoginContainer } from '../containers/LoginContainer';
+import { UserEdit as UserEditContainer } from '../containers/UserEditContainer';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -27,7 +28,8 @@ export const App: FC = () => {
       <Container maxWidth="md" className={classes.container}>
         <Switch>
           <Route exact path="/" component={Root} />
-          <Route path="/users/:id" component={UserContainer} />
+          <Route exact path="/users/:id" component={UserContainer} />
+          <Route exact path="/users/:id/edit" component={UserEditContainer} />
           <Route path="/signup" component={SignUpContainer} />
           <Route path="/login" component={LoginContainer} />
           <Redirect to="/" />
